@@ -1,0 +1,222 @@
+.profile .profile-card .social-links a.active {
+    color: #7367EF;
+
+}
+
+.access-card {
+    background-color: #e7e7e7;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+    position: relative;
+}
+
+.action {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.view {
+    text-align: left;
+    background-color: #3498db;
+    color: #fff;
+}
+
+.add {
+    text-align: left;
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.edit {
+    text-align: left;
+    background-color: #f39c12;
+    color: #fff;
+}
+
+.delete {
+    text-align: left;
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.access-card .ddsds {
+    text-align: left;
+    background-color: #465189;
+    color: #fff;
+}
+
+/* Add tick mark for active state */
+.action::before {
+    content: '\2713';
+    /* Unicode character for check mark */
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    /* Adjusted left position for the tick mark */
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.2em;
+    opacity: 0;
+    /* Initially hidden */
+}
+
+.action.active::before {
+    opacity: 1;
+    /* Show the tick mark for active state */
+    text-align: center;
+    background: #ffffff;
+    color: #7367EF;
+    border-radius: 50px;
+    width: 30px;
+}
+
+/* Additional styles for Laravel-based dynamic classes */
+.action.act {
+    background-color: #465189;
+    /* Default color for active state */
+    color: #fff;
+}
+
+.vl {
+    border-left: 3px solid #7367EF;
+    height: 200px;
+    padding-right: 13px;
+}
+
+.action:not(.active)::before {
+    content: 'X';
+    /* Show "X" for non-active state */
+    opacity: 1;
+    color: red !important;
+    background: #ffffff;
+    border-radius: 50px;
+    width: 30px;
+}
+
+.switch {
+    position: relative;
+    flex: inline-end;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .6s;
+    transition: .6s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .6s;
+    transition: .6s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #7367EF;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+}
+
+.notification {
+    display: none;
+    padding: 10px;
+    background-color: #7367EF;
+    color: white;
+    margin-top: 10px;
+}
+
+.overviews .label {
+    font-weight: 600;
+    cursor: pointer;
+    padding-right: 10px;
+    color: rgba(1, 41, 112, 0.6);
+}
+
+
+
+.sub-main {
+    margin: 22px;
+    float: left;
+}
+
+/*Button Three*/
+.button-three {
+    position: relative;
+    background-color: #fff;
+    border: none;
+    padding: 20px;
+    box-shadow: 0px 2px 10px 5px #97B1BF;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-three:hover {
+    background: aliceblue;
+    color: #000;
+}
+
+.button-three:after {
+    content: "";
+    background: aliceblue;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.button-three:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.sub-main .material-icons {
+    background-color: #d8edff;
+    color: #7367EF;
+    font-weight: 800;
+}
